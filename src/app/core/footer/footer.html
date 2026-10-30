@@ -1,0 +1,22 @@
+<footer class="bg-bg text-muted border-line border py-8">
+  <div class="grid grid-cols-3 items-center">
+    <div class="flex">
+      <a class="flex items-center pl-4 text-2xl" [routerLink]="'/'">
+        <img src="/logo.svg" />
+        <p class="text-fg mx-2">Elias Muscarella</p>
+      </a>
+    </div>
+
+    <p class="flex justify-center">&copy; 2026 Elias Muscarella. All rights reserved.</p>
+
+    <div class="flex justify-end pr-2">
+      @for (item of navSocials; track item.link) {
+        <a class="mx-1.5" [href]="item.link" target="_blank">
+          <svg class="text-fg inline h-10 w-10" viewBox="0 0 24 24" [attr.aria-label]="item.label">
+            <use [attr.href]="'/icons.svg#' + item.logo"></use>
+          </svg>
+        </a>
+      }
+    </div>
+  </div>
+</footer>

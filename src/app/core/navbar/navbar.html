@@ -1,0 +1,31 @@
+<nav class="bg-bg sticky top-0 left-0 grid grid-cols-3 items-center">
+  <!-- Name + Logo Link -->
+  <div class="flex">
+    <a class="flex items-center pl-4 text-2xl" [routerLink]="'/'">
+      <img src="/logo.svg" alt="Graph Logo" />
+      <p class="text-fg mx-2">Elias Muscarella</p>
+    </a>
+  </div>
+
+  <!-- Navigation Data -->
+  <ul class="text-muted flex justify-center py-5 text-lg">
+    @for (item of navData; track item.route) {
+      <li>
+        <a [routerLink]="item.route" class="hover:text-fg mx-4">{{ item.label }}</a>
+      </li>
+    }
+  </ul>
+
+  <!-- Social Links -->
+  <ul class="flex justify-end pr-2">
+    @for (item of navSocials; track item.link) {
+      <li>
+        <a class="mx-1.5" [href]="item.link" target="_blank">
+          <svg class="text-fg inline h-10 w-10" viewBox="0 0 24 24" [attr.aria-label]="item.label">
+            <use [attr.href]="'/icons.svg#' + item.logo"></use>
+          </svg>
+        </a>
+      </li>
+    }
+  </ul>
+</nav>

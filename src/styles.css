@@ -1,3 +1,31 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import 'tailwindcss';
+
+/* Design tokens: each --color-* creates bg-*, text-*, border-* classes */
+@theme {
+  /* backgrounds */
+  --color-bg: #0b0f14; /* page */
+  --color-bg-alt: #0e1319; /* alternate sections */
+  --color-strip: #0d1218; /* ticker tape */
+  --color-surface: #11161d; /* cards, panels */
+
+  /* borders */
+  --color-line: #1f2630;
+  --color-line-strong: #2b3440;
+
+  /* text */
+  --color-fg: #e6edf3; /* headings, names, active links */
+  --color-body: #c9d1d9; /* paragraphs */
+  --color-muted: #8b949e; /* links, secondary text */
+
+  /* market colors */
+  --color-up: #34d399; /* green: gains, buttons */
+  --color-down: #f87171; /* red: losses */
+  --color-label: #f5b544; /* amber: section labels */
+  --color-info: #8ab4f8; /* blue: watchlist badge */
+}
+
+* {
+  box-sizing: border-box;
+}

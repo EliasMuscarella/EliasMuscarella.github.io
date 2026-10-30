@@ -1,0 +1,52 @@
+<div class="bg-bg-alt grid grid-cols-2 justify-items-center">
+  <div class="my-28 flex min-w-0 flex-col">
+    <!--Market Open Box-->
+    <span
+      class="text-muted bg-surface border-line mb-4 inline-flex w-fit items-center justify-center rounded-2xl border px-5 py-2 text-xs"
+    >
+      MARKET OPEN · TAKING NEW POSITIONS
+    </span>
+
+    <!--Name & Intro Text-->
+    <div>
+      <h1 class="text-fg mb-6 text-6xl font-bold">Elias <span class="text-up">Muscarella</span></h1>
+      <p class="text-muted mb-6 max-w-xl">
+        Hi, I am Elias Muscarella. I am a senior computer science student at the University of
+        Central Florida. This portfolio is a collection of my professional work & experience.
+      </p>
+      <a
+        class="bg-up text-bg mr-4 content-center rounded-lg px-4 py-2 text-lg"
+        [routerLink]="'/projects'"
+      >
+        View Portfolio
+      </a>
+      <a
+        class="bg-bg-alt text-fg border-line text-bold content-center rounded-lg border px-4 py-2 text-lg"
+      >
+        Get In Touch
+      </a>
+      <div class="mt-8 grid grid-cols-3 gap-7">
+        @for (item of stats; track item.title) {
+          <div class="bg-surface border-line items-center rounded-2xl border">
+            <p class="text-muted px-4 py-1 pt-2">{{ item.title }}</p>
+            <p class="text-fg px-4 py-1 pb-3 text-xl">[{{ item.value }}]</p>
+          </div>
+        }
+      </div>
+    </div>
+  </div>
+
+  <!--Headshot Image-->
+  <div class="bg-surface border-line mx-22 my-10 flex flex-col rounded-2xl border px-4">
+    <div class="my-2 grid grid-cols-2">
+      <p class="text-fg ml-4 justify-self-start">[EAM] · PORTRAIT</p>
+      <p class="text-up mr-4 justify-self-end">▲ OPEN TO WORK</p>
+    </div>
+
+    <img src="/headshot.JPG" class="border-line mb-4 rounded-2xl border" />
+    <div class="border-line bg-bg-alt mb-4 grid grid-cols-2 rounded-lg border py-2">
+      <p class="text-fg ml-5 justify-self-start">Elias Anthony Muscarella</p>
+      <p class="text-up mr-5 justify-self-end">[EAM] ▲</p>
+    </div>
+  </div>
+</div>
