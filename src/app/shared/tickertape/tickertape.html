@@ -1,0 +1,38 @@
+<div class="flex overflow-hidden">
+  <ul class="align-center ticker-container flex w-max min-w-full shrink-0">
+    @for (item of tickertapeItems; track item.label) {
+      <li
+        class="ticker border-line text-fg bg-surface flex shrink-0 justify-center border px-2.5 py-2"
+      >
+        @if (item.class === 'up') {
+          <span>{{ item.label }}</span>
+          <span class="up px-2">{{ item.movement }}</span>
+          <span class="up">{{ item.description }}</span>
+        } @else if (item.class === 'down') {
+          <span>{{ item.label }}</span>
+          <span class="down px-2">{{ item.movement }}</span>
+          <span class="down">{{ item.description }}</span>
+        }
+      </li>
+    }
+  </ul>
+
+  <!--Second ticker for seamless scrolling appearence-->
+  <ul class="align-center ticker-container flex w-max min-w-full shrink-0" aria-hidden="true">
+    @for (item of tickertapeItems; track item.label) {
+      <li
+        class="ticker border-line text-fg bg-surface flex shrink-0 justify-center border px-2.5 py-2"
+      >
+        @if (item.class === 'up') {
+          <span>{{ item.label }}</span>
+          <span class="up px-2">{{ item.movement }}</span>
+          <span class="up">{{ item.description }}</span>
+        } @else if (item.class === 'down') {
+          <span>{{ item.label }}</span>
+          <span class="down px-2">{{ item.movement }}</span>
+          <span class="down">{{ item.description }}</span>
+        }
+      </li>
+    }
+  </ul>
+</div>
